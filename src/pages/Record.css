@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px
+
+}
+
+.heading h1 {
+   text-align: center;
+   margin: 20px 0px;
+}
+.Control_Panel {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 200px 4px 209px;
+}
+
+.label_Set {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.InputFeild {
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    /* margin-left: -15%; */
+    width: 684px;
+    /* display: block; */
+    border: 2px solid rgb(160, 130, 130);
+}
+
+.Main_Container {
+    display: flex;
+    justify-content: right;
+    margin-right: 208px;
+}
+
+.btn_Style {
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.Btn_Primary {
+    margin: 0px 16px;
+}
+
+.headStyle tr th {
+    border: 1px solid;
+    width: 14%;
+    padding: 6px 8px;
+    background: #1986d3;
+    color: white;
+}
+
+.tableStyle {
+    margin-top: 40px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.settbody td input  {
+    width: 100%;
+    padding: 6px 0px;
+ }
+
+ .change_Direction {
+     display: flex;
+ }
+
+ .edit {
+     font-size: 20px;
+ }
+ .Delete {
+     font-size: 20px;
+ }
+ .Eyes {
+   font-size: 20px;
+ }
+
+ .showError {
+    margin-left: 34.5%;
+    color: red;
+    
+ }
+  
+.border_error {
+   border: 1px solid red;
+ }
