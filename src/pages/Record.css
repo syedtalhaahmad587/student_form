@@ -101,7 +101,7 @@
     top: 10%;
     left: 33%;
     padding: 25px;
-    display: inline-block;
+    display: none;
   }
 .display-none {
     display: none;
@@ -111,7 +111,7 @@
       text-align: center;
 }
 .wrap_div {
-    display: flex;
+    display: none;
     justify-content: space-between;
     margin: 19px 0px 0px 5px;
 }
@@ -143,12 +143,12 @@
   }
   
   .wrap_div1 {
-    display: flex;
+    display: none;
     justify-content: space-between;
     margin: 18px 52px 0px 25px;
   }
   .btn_save {
-    display: flex;
+    display: none;
     flex-direction: row-reverse;
     margin: 15px 4px 0px 0px;;
   }

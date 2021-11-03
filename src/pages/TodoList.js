@@ -67,8 +67,11 @@ const TodoList = () => {
                 if (!emailRegex.test(data.email))
                     emailerror = "Incorrect Email Format"
             } 
-            if(!data.phone) 
-            contacterror = "Please enter phone number" 
+            if(!data.phone) {
+            contacterror = "Please enter phone number"
+            }else{
+                contacterror = ""
+            } 
             if(!data.schoolN)
             Schoolerror = "Please enter School Name"
             if(!data.qualified)
@@ -81,7 +84,7 @@ const TodoList = () => {
     
         else{
         setSuccess(false)
-        SetError({...Error , usererror , fathererror , doberror , emailerror , contacterror , Schoolerror : classerror})      
+        SetError({...Error , usererror , fathererror , doberror , emailerror , contacterror , Schoolerror , classerror})      
     }   
     }  
    
