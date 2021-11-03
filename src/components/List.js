@@ -24,17 +24,23 @@ const List = (props) => {
                    </tr> 
 
                </thead>
-               <tbody className={`settbody  ${props.tbody}`}>
+               <tbody className={`settbody  ${props.tbody}`}> 
                    {props.list.map((data , index) => 
                     <tr key={index}>
-                        <td><input type="text" value={data.username} disabled={data.disabled} onChange={(e)=> changeData(e.target.value , username , index) } /></td>
+                        <td><input type="text" value={data.username} disabled={data.disabled} onChange={(e)=>props.changeData(e.target.value , "username" , index) } /></td>
                         <td><input type="text" value={data.fatherName} disabled={data.disabled}  /></td>
                         <td><input type="text" value={data.dob}  disabled={data.disabled} /></td>
                         <td><input type="text" value={data.email}  disabled={data.disabled} /></td>
                         <td><input type="text" value={data.phone} disabled={data.disabled} /></td>
                         <td><input type="text" value={data.schoolN} disabled={data.disabled} /></td>
-                        <td><input type="text" value={data.qualified} disabled={data.disabled} /> </td>
-                        <td><span className="edit"  onClick={()=>props.clickEdit(index)}><FiEdit/></span><span className="Delete"><FiDelete  onClick={()=>props.clickDelt(index)}  /></span><span className="Eyes"  onClick={props.clickEye} ><FiEye/></span></td>
+                        <td><input type="text" value={data.qualified} disabled={data.disabled} /></td>
+                        <td>{data.disabled  ?
+                        <> 
+                         <span className="edit"  onClick={()=>props.clickEdit(index)}><FiEdit/></span><span className="Delete"><FiDelete  onClick={()=>props.clickDelt(index)}  /></span><span className="Eyes"  onClick={props.clickEye} ><FiEye/></span>
+                        </>
+                        : <button onClick={()=>props.changeText(index)}>Save</button>}
+                        
+                        </td>
                     </tr>
                    )} 
                </tbody>

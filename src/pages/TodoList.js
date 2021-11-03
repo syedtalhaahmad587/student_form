@@ -4,6 +4,7 @@ import BtnField from '../components/BtnField';
 import './Record.css'
 import List from '../components/List'; 
 import SmallError from '../components/SmallError';
+import ShowRecord from '../components/ShowRecord'
   
 const initailState = ({
         username : "",
@@ -97,7 +98,15 @@ const TodoList = () => {
        setList([...list])
     }
 
-    const itemChange = () => {}
+    const itemChange = (value,property,index) => {
+        list[index][property] = value
+            setList([...list])
+    }
+
+    const Save = (index) => {
+           list[index].disabled = true
+           setList([...list]); 
+    }
     return (
         <>
         <div className="heading"> 
@@ -138,7 +147,8 @@ const TodoList = () => {
          </div>
          </form>
         <List heading={["Name", "Father Name", "Date of Birth", "EmailAddress", "Contact No", "School Name", "Class" ,"Action"]} list={list} 
-        Table_Row="tableStyle"  clickEdit={editClicks} clickDelt={deltInput} change={itemChange}  />
+        Table_Row="tableStyle"  clickEdit={editClicks} clickDelt={deltInput} changeData={itemChange} changeText={Save}/>
+       <div className="container_wrap"><ShowRecord  clickEye="" /></div> 
      </>
      )
 }
